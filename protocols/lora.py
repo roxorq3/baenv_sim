@@ -1,7 +1,4 @@
-import simpy
 import numpy as np
-
-AUTH_TIME = 0
 
 
 class Lora:
@@ -11,15 +8,17 @@ class Lora:
         self.channels = channels
         self.action = env.process(self.run())
 
-    def auth(self):
-        print("Starting authentication")
-        yield self.env.timeout(np.abs(self.rng.standard_normal()))
-        print("Done with authentication")
+    # Skip synchronization?
+    def synchronization(self):
+        return
+
+
 
     def send(self):
-        print("Starting to transmit")
+        print("Requesting channel")
         with self.channels.request() as rq:
             yield rq
+            print("Channel received")
             print("Starting to transmit")
             yield self.env.timeout(np.abs(self.rng.standard_normal()))
             print("Done transmitting")
@@ -30,8 +29,4 @@ class Lora:
 
     def run(self):
         while True:
-            yield self.env.process(self.auth())
             yield self.env.process(self.send())
-
-
-

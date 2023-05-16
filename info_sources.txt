@@ -2,3 +2,10 @@ For implementation of WiFi:
 
 Links:
     --> https://community.nxp.com/t5/Wireless-Connectivity-Knowledge/802-11-Wi-Fi-Connection-Disconnection-process/ta-p/1121148#:~:text=Those%20three%20steps%20are%20device,establishment%20of%20connection%20(Association).
+    --> https://www.intel.com/content/www/us/en/support/articles/000006508/wireless/legacy-intel-wireless-products.html
+
+For implementation of 5g:
+
+Links:
+    --> https://www.eventhelix.com/5g/standalone-access-registration/5g-standalone-access-registration.pdf
+    --> https://www.linkedin.com/pulse/rrc-connection-setup-5g-bikas-singh?trk=pulse-article
